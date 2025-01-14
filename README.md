@@ -10,3 +10,12 @@ path = kagglehub.dataset_download("andradaolteanu/gtzan-dataset-music-genre-clas
 
 print("Path to dataset files:", path)
 ```
+
+
+```bash
+
+git clone https://github.com/CEMK-FY-25-GROUP-20/music_det.git
+
+
+
+```
