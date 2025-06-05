@@ -5,7 +5,7 @@ import math # Import the math module
 
 # ... (rest of your code) ...
 # Load the saved model
-model = keras.models.load_model("music_genre_cnn_model.h5")
+model = keras.models.load_model("trained/model_v1.h5")
 
 # Function to preprocess the audio file
 def process_input(audio_file, track_duration):
