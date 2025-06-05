@@ -4,7 +4,7 @@ import numpy as np  # For numerical operations
 from tensorflow import keras  # For loading the trained model
 
 # Load the pre-trained model for genre classification
-model = keras.models.load_model("music_genre_cnn_model.h5");
+model = keras.models.load_model("trainded/model_v1.h5");
 
 # Function to preprocess the audio file
 def process_input(audio_file, track_duration=30):
