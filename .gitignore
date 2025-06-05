@@ -3,4 +3,5 @@
 __pycache__/
 *.h5
 env/
+!trained/model_v1.h5
 
