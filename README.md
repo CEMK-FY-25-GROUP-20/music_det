@@ -1,18 +1,17 @@
-# music_det
-dataset link - https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification/data
+##  Music Genre Classifier
 
 
-```python
-import kagglehub
-# Download latest version
-path = kagglehub.dataset_download("andradaolteanu/gtzan-dataset-music-genre-classification")
-print("Path to dataset files:", path)
-```
+dataset link - [link](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification/data)
+
 
 
 ```bash
-
+# clone the repo
 git clone https://github.com/CEMK-FY-25-GROUP-20/music_det.git
-pip install -r requirements.txt
 
+# env setup
+pip install virtualenv
+virtualenv -p python3.8 myenv
+source myenv/bin/activate
+pip install -r requirements.txt
 ```
