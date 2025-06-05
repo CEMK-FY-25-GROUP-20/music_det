@@ -1,7 +1,7 @@
 ##  Music Genre Classifier
 
 
-dataset link - [link](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification/data)
+- Dataset link - [link](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification/data)
 
 
 
