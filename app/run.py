@@ -5,7 +5,7 @@ import math # Import the math module
 
 # ... (rest of your code) ...
 # Load the saved model
-model = keras.models.load_model("MusicGenre_CNN_79.73.h5")
+model = keras.models.load_model("music_genre_cnn_model.h5")
 
 # Function to preprocess the audio file
 def process_input(audio_file, track_duration):
@@ -62,3 +62,18 @@ predicted_index = np.argmax(prediction, axis=1)
 predicted_genre = genre_dict[int(predicted_index)]
 
 print("Predicted Genre:", predicted_genre)
+
+
+#interface
+import gradio as gr  # Import Gradio for building the UI
+# Create the Gradio interface
+interface = gr.Interface(
+    fn=predict_genre,  # Function to be executed when user uploads a file
+    inputs=gr.Audio(type="filepath"),  # Accept uploaded audio files
+    outputs="text",  # Display the prediction as text
+    title="Music Genre Classifier",  # Title of the app
+    description="Upload an audio file to predict its genre.",  # Short description
+)
+
+# Launch the Gradio app
+interface.launch()

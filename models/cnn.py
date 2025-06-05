@@ -110,7 +110,7 @@ def build_and_train_model(X_train, y_train, X_val, y_val, input_shape, num_class
     history = model.fit(
         X_train, y_train,
         validation_data=(X_val, y_val),
-        epochs=100, 
+        epochs=10, 
         batch_size=32,
         callbacks=[early_stopping, reduce_lr]
     )
@@ -138,7 +138,7 @@ def main():
     print(f"Test Accuracy: {accuracy:.4f}")
 
     # 4. Export the model
-    model_filename = "music_genre_cnn_model.keras"
+    model_filename = "music_genre_cnn_model.h5"
     model.save(model_filename)
     print(f"Trained model exported as {model_filename}")
 
