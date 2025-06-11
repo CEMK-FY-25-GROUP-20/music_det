@@ -5,8 +5,8 @@ import librosa
 import tensorflow.keras as keras
 
 # Load models
-cnn_model = keras.models.load_model("MusicGenre_CNN.h5")
-svm_model = joblib.load("MusicGenre_SVM.joblib")
+cnn_model = keras.models.load_model("")
+svm_model = joblib.load("")
 
 # Genre dictionary
 genre_dict = {0: "disco", 1: "pop", 2: "classical", 3: "metal", 4: "rock", 
@@ -63,7 +63,7 @@ def classify_genre(audio_file, model_type):
 iface = gr.Interface(
     fn=classify_genre,
     inputs=[
-        gr.Audio(type="filepath"),  # Remove source argument
+        gr.Audio(type="filepath"),  
         gr.Radio(["CNN", "SVM"], label="Select Model")
     ],
     outputs="text",
